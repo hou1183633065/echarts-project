@@ -1,5 +1,10 @@
 import Index from "@/views/Index.vue";
 
+// meta中
+// title为当前页面标题
+// requireAuth为是否需要鉴权
+// keepAlive为是否需要缓存
+
 const routes = [
   {
     path: "/",
@@ -23,7 +28,8 @@ const routes = [
     name: "charts",
     meta: {
       title: "Charts",
-      requireAuth: false
+      requireAuth: false,
+      keepAlive: true
     },
     component: () => import("@/views/Charts.vue")
   },
