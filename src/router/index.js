@@ -20,10 +20,8 @@ router.beforeEach((to, from, next) => {
   // 判断是否需要登录权限
   if (to.matched.some(res => res.meta.requireAuth)) {
     alert("打开此页面需要鉴权");
-    // 回到当前页
-    next("/");
     // 跳转其他页面
-    // next("/Charts");
+    next("/Charts");
     //     if (localStorage.getItem('uuid') != 'null' && localStorage.getItem('uuid') != '') {// 判断是否存在uuid或是uuid是否为空
     //         next()
     //     } else {// 没uuid则跳转到注册登录界面
