@@ -10,6 +10,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "echarts": "^4.2.0-rc.2",
     "register-service-worker": "^1.0.0",
     "v-charts": "^1.19.0",
     "vue": "^2.5.17",

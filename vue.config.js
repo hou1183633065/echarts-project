@@ -1,6 +1,6 @@
 module.exports = {
-  assetsDir: 'static',
-  baseUrl: '/charts/',
+  assetsDir: "static",
+  baseUrl: undefined,
   outputDir: undefined,
   runtimeCompiler: undefined,
   productionSourceMap: undefined,
@@ -8,4 +8,4 @@ module.exports = {
   css: {
     sourceMap: true
   }
-}
+};
