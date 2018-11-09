@@ -1,11 +1,12 @@
 <template>
-  <div class="LineChart"><ve-line :data="chartData"></ve-line></div>
+  <div class="HistogramChart"><ve-line :data="chartData"></ve-line></div>
 </template>
 
 <script>
-import VeLine from "v-charts/lib/line.common";
+// 柱状图
+import VeLine from "v-charts/lib/histogram.common";
 export default {
-  name: "LineChart",
+  name: "HistogramChart",
   components: {
     VeLine
   },
@@ -66,7 +67,4 @@ export default {
 </script>
 
 <style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
-}
 </style>
