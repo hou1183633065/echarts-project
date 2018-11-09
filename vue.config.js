@@ -6,6 +6,7 @@ module.exports = {
   productionSourceMap: undefined,
   parallel: undefined,
   css: {
-    sourceMap: true
+    sourceMap: true,
+    modules: true
   }
 };
