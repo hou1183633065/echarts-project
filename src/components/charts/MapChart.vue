@@ -1,5 +1,12 @@
 <template>
-  <div class="BarChart"><ve-map :data="chartData" :settings="chartSettings" :extend="chartExtend"></ve-map></div>
+  <div class="BarChart">
+    <span>当前选中了: {{ cityName || "-" }}</span>
+    <ve-map
+      :data="chartData"
+      :settings="chartSettings"
+      :events="chartEvents"
+    ></ve-map>
+  </div>
 </template>
 
 <script>
@@ -11,51 +18,30 @@ export default {
     VeMap
   },
   data() {
-   this.chartSettings = {
-        positionJsonLink: 'https://unpkg.com/v-charts-custom-maps@0.2.1/hk-geo.json',
-        position: 'HK',
-        beforeRegisterMap (json) {
-          // edit data here such as:
-          // json.features[0].properties.cp = [121.509062, 26.044332]
-          console.log(json)
-          return json
-        }
+    this.chartSettings = {
+      position: "china",
+      // selectData: true,
+      selectedMode: "single"
+    };
+    this.chartEvents = {
+      click: v => {
+        this.cityName = v.name;
       }
-      this.chartExtend = {
-        series: {
-          nameMap: {
-            'Central and Western':'中西区',
-            'Eastern':'东区',
-            'Islands':'离岛',
-            'Kowloon City':'九龙城',
-            'Kwai Tsing':'葵青',
-            'Kwun Tong':'观塘',
-            'North':'北区',
-            'Sai Kung':'西贡',
-            'Sha Tin':'沙田',
-            'Sham Shui Po':'深水埗',
-            'Southern':'南区',
-            'Tai Po':'大埔',
-            'Tsuen Wan':'荃湾',
-            'Tuen Mun':'屯门',
-            'Wan Chai':'湾仔',
-            'Wong Tai Sin':'黄大仙',
-            'Yau Tsim Mong':'油尖旺',
-            'Yuen Long':'元朗'
-          }
-        }
-      }
+    };
     return {
+      cityName: "",
       chartData: {
-          columns: ['位置', ' 人口'],
-          rows: [
-            { '位置': '北区', ' 人口': 123 }
-          ]
-        }
+        columns: ["位置", "GDP"],
+        rows: [
+          { 位置: "吉林", GDP: 123 },
+          { 位置: "北京", GDP: 1223 },
+          { 位置: "上海", GDP: 2123 },
+          { 位置: "浙江", GDP: 4123 }
+        ]
+      }
     };
   }
 };
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>

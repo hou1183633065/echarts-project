@@ -1,11 +1,16 @@
 <template>
   <div class="charts">
-    <!-- <line-chart/>
-    <bar-chart/>
-    <histogram-chart/> -->
-    <!-- <bmap-chart/><hr> -->
-    <!-- <amap-chart/> -->
-    <map-chart/>
+    <line-chart />
+    <hr />
+    <bar-chart />
+    <hr />
+    <histogram-chart />
+    <hr />
+    <bmap-chart />
+    <hr />
+    <amap-chart />
+    <hr />
+    <map-chart />
   </div>
 </template>
 

@@ -3,7 +3,8 @@
     <ve-bmap
       :settings="chartSettings"
       :series="chartSeries"
-      :tooltip="chartTooltip">
+      :tooltip="chartTooltip"
+    >
     </ve-bmap>
   </div>
 </template>
@@ -18,30 +19,29 @@ export default {
   },
   data() {
     this.chartSettings = {
-        key: 'oBvDtR6nzWtVchkY4cLHtnah1VVZQKRK',
-        bmap: {
-          center: [120, 30],
-          zoom: 14,
-          roam: true,
-          mapStyle: {}
-        }
+      key: "oBvDtR6nzWtVchkY4cLHtnah1VVZQKRK",
+      bmap: {
+        center: [120, 30],
+        zoom: 14,
+        roam: true,
+        mapStyle: {}
       }
-      this.chartTooltip = { show: true }
+    };
+    this.chartTooltip = { show: true };
 
     return {
       chartSeries: [
-          {
-            type: 'scatter',
-            coordinateSystem: 'bmap',
-            data: [
-              [120, 30, 1] // 经度，维度，value，...
-            ]
-          }
-        ]
+        {
+          type: "scatter",
+          coordinateSystem: "bmap",
+          data: [
+            [120, 30, 1] // 经度，维度，value，...
+          ]
+        }
+      ]
     };
   }
 };
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>
