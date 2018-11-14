@@ -3,10 +3,10 @@ module.exports = {
   baseUrl: undefined,
   outputDir: undefined,
   runtimeCompiler: undefined,
-  productionSourceMap: undefined,
-  parallel: undefined,
+  productionSourceMap: false,
+  parallel: false,
   css: {
-    sourceMap: true,
-    modules: true
+    modules: true,
+    sourceMap: true
   }
 };
