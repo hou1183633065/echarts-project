@@ -1,9 +1,20 @@
 <template>
   <div class="indexPage">
-    <scroll-title :msg="titleMsg"></scroll-title>
-    <scroll-title msg="1111111111111111111111"></scroll-title>
-    <scroll-title msg="2222222222222222222222"></scroll-title>
-    <scroll-title msg="3333333333333333333333"></scroll-title>
+    <i-button type='success'>Button</i-button>
+    <i-row>
+      <i-col span="6">
+        <scroll-title :msg="titleMsg"></scroll-title>
+      </i-col>
+      <i-col span="6">
+        <scroll-title :msg="titleMsg"></scroll-title>
+      </i-col>
+      <i-col span="6">
+        <scroll-title :msg="titleMsg"></scroll-title>
+      </i-col>
+      <i-col span="6">
+        <scroll-title :msg="titleMsg"></scroll-title>
+      </i-col>
+    </i-row>
     <div id="nav">
       <router-link to="/home">Home</router-link> |
       <router-link to="/about">About</router-link> |
@@ -12,15 +23,19 @@
   </div>
 </template>
 <script>
+import { Row, Col, Button } from "iview";
 import ScrollTitle from "@/components/ScrollTitle.vue";
 export default {
   name: "index",
   components: {
+    iRow: Row,
+    iCol: Col,
+    iButton: Button,
     ScrollTitle
   },
   data() {
     return {
-      titleMsg: "阿克苏接电话看见爱上的"
+      titleMsg: "阿克苏接电话看见爱上的阿克苏接电话看见爱上的"
     };
   }
 };
